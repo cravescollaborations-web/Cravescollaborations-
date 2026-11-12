@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#170f13">
+<title>Private Requests | Exclusive Access</title>
+<style>
+:root{--bg:#120d10;--panel:#21171c;--gold:#d9b875;--muted:#c7b8ae;--wine:#641d31;--line:rgba(217,184,117,.28)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#46202b 0%,#1a1116 38%,#100c0f 78%);color:#f7f0e8;font:16px/1.55 Georgia,serif}
+main{width:min(100% - 28px,680px);margin:0 auto;padding:34px 0 52px}
+.hero{text-align:center;padding:28px 18px 26px}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font:11px/1.4 Arial,sans-serif}
+h1{font-size:clamp(36px,8vw,58px);font-weight:400;line-height:1.05;margin:14px 0 12px;color:#f1d7a4}
+.subtitle{color:var(--muted);max-width:440px;margin:0 auto}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:10px auto 24px;max-width:440px}
+.card{background:linear-gradient(145deg,rgba(43,29,35,.96),rgba(23,17,21,.98));border:1px solid var(--line);border-radius:20px;padding:24px;margin:16px 0;box-shadow:0 18px 50px #0005}
+h2{font-weight:400;color:#f1d7a4;font-size:27px;margin:0 0 5px}
+.intro{color:var(--muted);font-size:14px;margin:0 0 18px}
+.menu-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(217,184,117,.16)}
+.menu-row:last-child{border:0}
+.menu-row span:first-child{color:#f5e8d9}
+.price{color:var(--gold);white-space:nowrap}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+.btn{display:block;text-align:center;text-decoration:none;border-radius:999px;padding:14px 18px;margin-top:12px;font:600 14px Arial,sans-serif;letter-spacing:.04em}
+.primary{background:linear-gradient(100deg,#b68b4b,#f0d49a);color:#1b1114}
+.secondary{border:1px solid var(--gold);color:#f1d7a4;background:#ffffff06}
+form{display:grid;gap:12px}
+label{font:12px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+input,select,textarea{width:100%;border:1px solid rgba(217,184,117,.28);border-radius:11px;background:#100c0f;color:#fff;padding:13px;font:15px Arial,sans-serif}
+textarea{min-height:100px;resize:vertical}
+small,.fine{color:var(--muted);font-size:12px}
+.check{display:flex;align-items:flex-start;gap:9px;font:13px Arial,sans-serif;color:var(--muted)}
+.check input{width:auto;margin-top:3px}
+.footer{text-align:center;color:#9e8e86;font:11px/1.6 Arial,sans-serif;padding:20px 8px}
+a{color:inherit}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--gold);font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="eyebrow">A little luxury • Personal requests</div>
+    <h1>Private &amp; Personal</h1>
+    <p class="subtitle">A discreet space for enquiries, individual requests and exclusive updates.</p>
+  </header>
+  <div class="rule"></div>
+
+  <section class="card" aria-labelledby="menu-title">
+    <span class="pill">The menu</span>
+    <h2 id="menu-title">Price List</h2>
+    <p class="intro">Choose an option below or send a custom enquiry.</p>
+    <div class="menu-row"><span>1 Hour Session</span><strong class="price">£150</strong></div>
+    <div class="menu-row"><span>30 Min Session</span><strong class="price">£100</strong></div>
+    <div class="menu-row"><span>FaceTime Session</span><strong class="price">£40</strong></div>
+    <div class="menu-row"><span>Photo</span><strong class="price">£25</strong></div>
+    <div class="menu-row"><span>Outcall</span><strong class="price">£200 + travel</strong></div>
+    <p class="note">All requests considered. Availability, boundaries and any additional costs are confirmed before anything is agreed.</p>
+    <a class="btn primary" href="#request">Make a request</a>
+  </section>
+
+  <section class="card" id="request" aria-labelledby="request-title">
+    <span class="pill">Enquiries</span>
+    <h2 id="request-title">Request something</h2>
+    <p class="intro">Tell me what you’re interested in. Your message will open in WhatsApp for you to review and send.</p>
+    <form id="requestForm">
+      <div><label for="name">Your name / nickname</label><input id="name" name="name" autocomplete="name" placeholder="What should I call you?"></div>
+      <div><label for="choice">What are you enquiring about?</label>
+        <select id="choice" name="choice">
+          <option>1 Hour Session — £150</option><option>30 Min Session — £100</option>
+          <option>FaceTime Session — £40</option><option>Photo — £25</option>
+          <option>Outcall — £200 plus travel</option><option>Custom request</option>
+        </select>
+      </div>
+      <div><label for="details">Your request</label><textarea id="details" name="details" placeholder="Add preferred date/time, details or a custom request…"></textarea></div>
+      <div class="check"><input type="checkbox" id="adult" required><span>I confirm that I am 18 or over and understand that an enquiry is not a booking or guarantee of availability.</span></div>
+      <button class="btn primary" type="submit">Send enquiry on WhatsApp</button>
+      <small>Only send information you’re comfortable sharing. Please don’t include payment-card details or sensitive personal information.</small>
+    </form>
+  </section>
+
+  <section class="card" aria-labelledby="exclusive-title">
+    <span class="pill">Members area</span>
+    <h2 id="exclusive-title">Exclusive access</h2>
+    <p class="intro">A separate subscription space for members-only posts, updates and content that may not be suitable for TikTok. Access, age checks, payments and content hosting are handled by the membership platform.</p>
+    <a class="btn primary" id="subscribeLink" href="#" target="_blank" rel="noopener">Subscribe / enter members area</a>
+    <p class="note">The subscription button is a placeholder until you add your membership page link.</p>
+  </section>
+
+  <section class="card">
+    <h2>Get in touch</h2>
+    <p class="intro">For enquiries and availability, message directly on WhatsApp.</p>
+    <a class="btn secondary" href="https://wa.me/447871575176" target="_blank" rel="noopener">WhatsApp: 07871 575176</a>
+  </section>
+
+  <footer class="footer">
+    Adults 18+ only. Please respect personal boundaries and agreed terms.<br>
+    Be respectful • Enquiries are subject to availability • No unsolicited explicit messages
+  </footer>
+</main>
+<script>
+const phone = "447871575176";
+document.getElementById("requestForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  if(!document.getElementById("adult").checked){return;}
+  const name = document.getElementById("name").value.trim() || "Not provided";
+  const choice = document.getElementById("choice").value;
+  const details = document.getElementById("details").value.trim() || "No extra details";
+  const message = `Hello, I'd like to make an enquiry.%0AName: ${encodeURIComponent(name)}%0AInterested in: ${encodeURIComponent(choice)}%0ADetails: ${encodeURIComponent(details)}`;
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank", "noopener");
+});
+</script>
+</body>
+</html>
